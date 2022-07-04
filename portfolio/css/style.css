@@ -1,0 +1,95 @@
+*{margin:0; padding: 0; box-sizing: border-box;}
+body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
+
+/* 메뉴바 영역 */
+.navbar a{text-decoration: none; color: white; font-size: 24px;} 
+.navbar{display: flex; justify-content: space-between; align-items: center; background-color: cadetblue; padding: 8px 12px;}
+.navbar__logo{font-size: 24px; color: white;}
+.navbar__logo a{font-size: 36px;}
+.navbar__logo i{color: lightcoral; font-size: xx-large;}
+.navbar__menu{display: flex; list-style: none; padding-left: 0;}
+.navbar__menu li{padding: 8px 12px;}
+/* .navbar__menu li a{margin-right: 20px;} */
+.navbar__menu li:hover{background:lightcoral ; border-radius: 4px;}
+.navbar__icons{list-style: none; color: white; display: flex; padding-left: 0;}
+.navbar__icons li{padding: 8px 12px;}
+.navbar__toggleBtn{position: absolute; right: 32px;  top:15px; font-size: 24px; color:lightcoral; display: none;}
+
+/* 슬라이드 영역 */
+.section input[id*="slide"]{display: none;}
+.section .slidewrap{max-width: 1200px;margin: 0 auto; overflow: hidden;}
+.section .slidelist{white-space: nowrap; font-size: 0;}
+.section .slidelist > li{display: inline-block; vertical-align: middle; width: 100%; transition: all .5s;}
+.section .slidelist > li > a {display: block; position: relative;}
+.section .slidelist > li > a img{width: 100%;}
+.section .slidelist label{position:absolute; z-index: 10; top: 50%; transform: translateY(-50%); padding: 50px; cursor: pointer;}
+.section .slidelist .textbox {position:absolute;z-index:1;top:70%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
+.section .slidelist .textbox h3 {font-size:40px;color:rgb(255, 255, 255);;transform:translateY(30px);transition:all .5s;}
+.section .slidelist .textbox p {padding: 5px; font-size:26px; background-color: rgb(143, 187, 189); border-radius: 20px; color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
+
+/* input에 체크되면 슬라이드 효과 */
+.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
+.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
+.section input[id="slide03"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-200%);}
+
+/* input에 체크되면 텍스트 효과 */
+.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+.section input[id="slide01"]:checked ~ .slidewrap li:nth-child(1) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+.section input[id="slide02"]:checked ~ .slidewrap li:nth-child(2) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox h3 {opacity:1;transform:translateY(0);transition-delay:.2s;}
+.section input[id="slide03"]:checked ~ .slidewrap li:nth-child(3) .textbox p {opacity:1;transform:translateY(0);transition-delay:.4s;}
+
+/* 좌,우 슬라이드 버튼 */
+.slide-control > div {display:none;}
+.section .slidelist .left{left: 30px; background: url(left.png) center center/ 100% no-repeat;}
+.section .slidelist .right{right: 30px; background: url(right.png) center center/ 100% no-repeat;}
+.section input[id="slide01"]:checked ~ .slidewrap .slide-control > div:nth-child(1) {display:block;}
+.section input[id="slide02"]:checked ~ .slidewrap .slide-control > div:nth-child(2) {display:block;}
+.section input[id="slide03"]:checked ~ .slidewrap .slide-control > div:nth-child(3) {display:block;}
+
+/* 페이징 */
+.slide-pagelist {text-align:center;padding:20px;}
+.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+.slide-pagelist > li > label {display:block;padding:8px 30px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
+.section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
+.section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
+.section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+
+
+/* 푸터영역 */
+.footer {text-align: left; padding: 30px 50px;} 
+.footer hr{margin-bottom: 10px; width: 100%;}
+.footer li {position: relative; display: inline; padding: 0 5px 0 10px; white-space: nowrap;}
+.footer li a, footer address,footer address a{text-decoration: none; color: rgb(54, 54, 54);}
+.footer li:before {content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left: 0; top: 2px;}
+.footer li:first-child:before {width: 0;}
+.footer address {padding-top: 15px;}
+
+@media screen and (max-width: 1024px){
+    .navbar{flex-direction: column; align-items: flex-start; padding: 8px 24px;}
+    .navbar__menu{display:none; flex-direction: column; align-items: center; width: 100%;}
+    .navbar__menu li{width: 100%; text-align: center;}
+    .navbar__icons{display:none; justify-content: center; width: 100%;}
+    .navbar__toggleBtn{display: block;}
+    .navbar__menu.active, .navbar__icons.active{display: flex;}
+    .slideitem img{height: 400px;}
+    .section .slidelist .left{left: 10px;}
+    .section .slidelist .right{right: 10px;}
+    .section .slidelist .left, .section .slidelist .right{top: 500px;}
+}
+
+@media screen and (max-width: 768px){
+    .navbar{flex-direction: column; align-items: flex-start; padding: 8px 24px;}
+    .navbar__menu{display:none; flex-direction: column; align-items: center; width: 100%;}
+    .navbar__menu li{width: 100%; text-align: center;}
+    .navbar__icons{display:none; justify-content: center; width: 100%;}
+    .navbar__toggleBtn{display: block;}
+    .navbar__menu.active, .navbar__icons.active{display: flex;}
+    .slideitem img{height: 400px;}
+    .section .slidelist .left{left: 10px;}
+    .section .slidelist .right{right: 10px;}
+    .section .slidelist .left, .section .slidelist .right{top: 500px;}
+    .section .slidelist .textbox h3{font-size: 36px;}
+    .section .slidelist .textbox p{font-size: 24px;}
+}
