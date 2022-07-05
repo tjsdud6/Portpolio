@@ -50,11 +50,23 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
 
 /* 페이징 */
 .slide-pagelist {text-align:center;padding:20px;}
-.slide-pagelist > li {display:inline-block;vertical-align:middle;}
+.slide-pagelist > li {display:inline-block;vertical-align:middle;}글자앞으로가기 단축키
 .slide-pagelist > li > label {display:block;padding:8px 30px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
 .section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
 .section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
 .section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
+
+/* 갤러리 게시판 */ /*https://www.youtube.com/watch?v=hW9Els50rmk 25:54까지*/
+.menu1{padding: 50px;}
+.menu1 img{width: 445px; height: 300px;}
+.helpdog {width: 980px;} /*2개까지만 정렬 되게 가로 사이즈 준거임*/
+.helpdog > li {float: left; padding: 0 22px 22px 0; width: 470px;} 
+/* .helpdog > li:nth-child(2n) {padding-right: 0;} */
+.helpdog li a {display:block; position: relative; text-decoration: none;}
+.helpdog li ul{padding: 20px; border: 1px solid #ddd;}
+.helpdog li ul li {padding: 0 0 12px 15px; font-size: 30px; color: #333; list-style: none; line-height: 100% ;}
+.helpdog li a span {position: absolute; right: 30px; bottom: 80px; width: 81px; height: 28px; background: cadetblue; color: #fff; line-height: 28px; text-align: center; font-size: 20px;} 
+
 
 
 /* 푸터영역 */
@@ -77,6 +89,9 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
     .section .slidelist .left{left: 10px;}
     .section .slidelist .right{right: 10px;}
     .section .slidelist .left, .section .slidelist .right{top: 500px;}
+    .helpdog {width: 540px;}
+    .helpdog > li {float: left; width: 50%; box-sizing: border-box;} 
+    .helpdog > li img{width: 100%;}
 }
 
 @media screen and (max-width: 768px){
@@ -92,4 +107,5 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
     .section .slidelist .left, .section .slidelist .right{top: 500px;}
     .section .slidelist .textbox h3{font-size: 36px;}
     .section .slidelist .textbox p{font-size: 24px;}
+    .helpdog {width: 400px;}
 }
