@@ -50,23 +50,35 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
 
 /* 페이징 */
 .slide-pagelist {text-align:center;padding:20px;}
-.slide-pagelist > li {display:inline-block;vertical-align:middle;}글자앞으로가기 단축키
+.slide-pagelist > li {display:inline-block;vertical-align:middle;}
 .slide-pagelist > li > label {display:block;padding:8px 30px;border-radius:30px;background:#ccc;margin:20px 10px;cursor:pointer;}
 .section input[id="slide01"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(1) > label {background:#999;}
 .section input[id="slide02"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(2) > label {background:#999;}
 .section input[id="slide03"]:checked ~ .slidewrap .slide-pagelist > li:nth-child(3) > label {background:#999;}
 
-/* 갤러리 게시판 */ /*https://www.youtube.com/watch?v=hW9Els50rmk 25:54까지*/
-.menu1{padding: 50px;}
-.menu1 img{width: 445px; height: 300px;}
-.helpdog {width: 980px;} /*2개까지만 정렬 되게 가로 사이즈 준거임*/
+/* 갤러리 게시판 menu1*/
+.containter h1{text-align: center; font-size: 3em; margin-top: 20px;}
+.menu1{padding: 30px 30px;}
+.menu1 img{width: 450px; height: 300px;}
+.helpdog li::marker {color: white;}
+.helpdog {width: 1600px;} /*3개까지만 정렬 되게 가로 사이즈 준거임*/
 .helpdog > li {float: left; padding: 0 22px 22px 0; width: 470px;} 
-/* .helpdog > li:nth-child(2n) {padding-right: 0;} */
 .helpdog li a {display:block; position: relative; text-decoration: none;}
-.helpdog li ul{padding: 20px; border: 1px solid #ddd;}
+.helpdog li ul{padding: 20px; border: 1px solid #ddd; list-style: none;}
 .helpdog li ul li {padding: 0 0 12px 15px; font-size: 30px; color: #333; list-style: none; line-height: 100% ;}
 .helpdog li a span {position: absolute; right: 30px; bottom: 80px; width: 81px; height: 28px; background: cadetblue; color: #fff; line-height: 28px; text-align: center; font-size: 20px;} 
 
+/* 갤러리 게시판 menu2*/
+.containter h1{text-align: center; font-size: 3em; margin-top: 20px;}
+.menu2{padding: 30px 30px;}
+.menu2 img{width: 450px; height: 300px;}
+.showdog li::marker {color: white;}
+.showdog {width: 1600px;} /*3개까지만 정렬 되게 가로 사이즈 준거임*/
+.showdog > li {float: left; padding: 0 22px 22px 0; width: 470px;} 
+.showdog li a {display:block; position: relative; text-decoration: none;}
+.showdog li ul{padding: 20px; border: 1px solid #ddd; list-style: none;}
+.showdog li ul li {padding: 0 0 12px 15px; font-size: 30px; color: #333; list-style: none; line-height: 100% ;}
+.showdog li a span {position: absolute; right: 30px; bottom: 30px; width: 81px; height: 28px; background: cadetblue; color: #fff; text-align: center; font-size: 20px;} 
 
 
 /* 푸터영역 */
@@ -77,6 +89,7 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
 .footer li:before {content: ''; width: 1px; height: 12px; background-color: #dbdbdb; position: absolute; left: 0; top: 2px;}
 .footer li:first-child:before {width: 0;}
 .footer address {padding-top: 15px;}
+
 
 @media screen and (max-width: 1024px){
     .navbar{flex-direction: column; align-items: flex-start; padding: 8px 24px;}
@@ -89,9 +102,20 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
     .section .slidelist .left{left: 10px;}
     .section .slidelist .right{right: 10px;}
     .section .slidelist .left, .section .slidelist .right{top: 500px;}
-    .helpdog {width: 540px;}
+    /* 메뉴1 */
+    .helpdog {width: 800px;}
     .helpdog > li {float: left; width: 50%; box-sizing: border-box;} 
     .helpdog > li img{width: 100%;}
+    .helpdog li ul{padding: 20px 20px 10px 20px;}
+    .helpdog li ul li {font-size: 26px; padding-left: 0;}
+    .helpdog li a span {right: 20px; bottom: 30px; width: 81px; height: 28px; line-height: 28px;}  
+    /* 메뉴2 */
+    .showdog {width: 800px;}
+    .showdog > li {float: left; width: 50%; box-sizing: border-box;} 
+    .showdog > li img{width: 100%;}
+    .showdog li ul{padding: 20px 20px 10px 20px;}
+    .showdog li ul li {font-size: 26px; padding-left: 0;}
+    .showdog li a span {right: 20px; bottom: 30px; width: 81px; height: 28px; line-height: 28px;}  
 }
 
 @media screen and (max-width: 768px){
@@ -107,5 +131,18 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
     .section .slidelist .left, .section .slidelist .right{top: 500px;}
     .section .slidelist .textbox h3{font-size: 36px;}
     .section .slidelist .textbox p{font-size: 24px;}
-    .helpdog {width: 400px;}
+    /* 메뉴1 */
+    .menu1{padding: 0 10px; box-sizing: border-box;}
+    .helpdog {width: 100%;}
+    .helpdog > li {float: none; width: 100%; box-sizing: border-box;} 
+    .helpdog > li img{width: 100%;}
+    .helpdog li ul li {font-size: 26px; padding-left: 0;}
+    .helpdog li a span {right: 20px; bottom: 30px; width: 81px; height: 28px; line-height: 28px;}  
+    /* 메뉴2 */
+    .menu1{padding: 0 10px; box-sizing: border-box;}
+    .showdog {width: 100%;}
+    .showdog > li {float: none; width: 100%; box-sizing: border-box;} 
+    .showdog > li img{width: 100%;}
+    .showdog li ul li {font-size: 26px; padding-left: 0;}
+    .showdog li a span {right: 20px; bottom: 30px; width: 81px; height: 28px; line-height: 28px;}  
 }
