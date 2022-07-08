@@ -139,7 +139,7 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
     .helpdog li ul li {font-size: 26px; padding-left: 0;}
     .helpdog li a span {right: 20px; bottom: 30px; width: 81px; height: 28px; line-height: 28px;}  
     /* 메뉴2 */
-    .menu1{padding: 0 10px; box-sizing: border-box;}
+    .menu2{padding: 0 10px; box-sizing: border-box;}
     .showdog {width: 100%;}
     .showdog > li {float: none; width: 100%; box-sizing: border-box;} 
     .showdog > li img{width: 100%;}
