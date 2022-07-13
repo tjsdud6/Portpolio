@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <title>선영</title>
     <script src="https://kit.fontawesome.com/6bd3ac15bd.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer></script>
@@ -33,9 +34,16 @@
             <i class="fa-solid fa-bars"></i>
             </a>
         </nav>
+        <!-- 주소 검색 -->
+        <div id="address">
+            <input type="text" id="postcode" placeholder="주소검색">
+            <input type="button" onclick="sample6_execDaumPostcode()" value="주소검색"><br>
+            <input type="text" id="address" placeholder="주소"><br>
+            <!-- <input type="text" id="sample6_detailAddress" placeholder="상세주소"> -->
+            <input type="text" id="extraAddress" placeholder="건물명">
+        </div>
 
-        <p>메뉴3</p>
-    
+
         
         <!-- 푸터영역 -->
         <footer id="footer">
