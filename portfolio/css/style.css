@@ -82,7 +82,18 @@ body{margin: 0; font-family: 'Nanum Pen Script', cursive;}
 
 
 /* 게시판 menu3*/
-.address {position: flex; align-items: center; width: 50%;}
+.address{float: center;}
+
+/* 갤러리 게시판 menu4*/
+.menu4{padding: 30px 30px;}
+.menu4 img{width: 450px; height: 300px;}
+.buying li::marker {color: white;}
+.buying {width: 1600px;} /*3개까지만 정렬 되게 가로 사이즈 준거임*/
+.buying > li {float: left; padding: 0 22px 22px 0; width: 470px;} 
+.buying li a {display:block; position: relative; text-decoration: none;}
+.buying li ul{padding: 20px; list-style: none;}
+.buying li ul li {padding: 0 0 12px 15px; font-size: 30px; color: #333; list-style: none; line-height: 100% ;}
+.buying li a span {position: absolute; right: 30px; bottom: 30px; width: 81px; height: 28px; background: cadetblue; color: #fff; text-align: center; font-size: 20px;} 
 
 
 /* 푸터영역 */
